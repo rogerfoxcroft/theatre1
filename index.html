@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theatre1 - High Fidelity</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 shadow p-4 flex justify-between">
+        <div class="flex items-center space-x-4">
+            <img src="assets/Theatre1 Logo 600px.png" alt="Theatre1 Logo" class="h-10">
+            <span class="text-xl font-semibold">Theatre1</span>
+        </div>
+        <div class="flex space-x-6 items-center">
+            <a href="index.html" class="hover:text-blue-400">Home</a>
+            <a href="past.html" class="hover:text-blue-400">Past Performances</a>
+            <a href="founders.html" class="hover:text-blue-400">Founders</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="text-center py-10">
+        <img src="assets/Early Poster - Square.png" alt="High Fidelity Poster" class="mx-auto rounded shadow-lg w-1/2">
+        <h1 class="text-4xl font-bold mt-8">High Fidelity – A New Musical</h1>
+        <p class="mt-4 text-lg">8th to 12th July 2025<br>Crown Wharf Theatre, Stone, Staffordshire</p>
+        <a href="https://www.crownwharftheatre.org.uk/high-fidelity/" target="_blank" class="inline-block mt-6 bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700">Buy Tickets</a>
+        <div class="mt-8">
+            <img src="assets/Crown Wharf Logo.png" alt="Crown Wharf Theatre Logo" class="h-20 mx-auto">
+        </div>
+    </section>
+
+    <!-- Past Performances Page -->
+    <section id="past" class="py-10 hidden">
+        <div class="text-center">
+            <h2 class="text-3xl font-bold mb-6">Past Performances</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <div class="bg-gray-800 p-6 rounded shadow">
+                    <img src="assets/4-days-to-go.png" alt="4 Days to Go" class="rounded mb-4">
+                    <h3 class="text-2xl font-semibold">4 Days to Go (2014)</h3>
+                </div>
+                <div class="bg-gray-800 p-6 rounded shadow">
+                    <img src="assets/songs-for-a-new-world.png" alt="Songs For a New World" class="rounded mb-4">
+                    <h3 class="text-2xl font-semibold">Songs For a New World (2015)</h3>
+                </div>
+                <!-- Add similar blocks for each past performance with corresponding images -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Founders Page -->
+    <section id="founders" class="py-10 hidden">
+        <div class="text-center">
+            <h2 class="text-3xl font-bold mb-6">Meet the Founders</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-gray-800 p-6 rounded shadow text-center">
+                    <img src="assets/david-reynolds.jpg" alt="David Reynolds" class="rounded-full h-32 w-32 mx-auto mb-4">
+                    <h3 class="text-2xl font-semibold">David Reynolds</h3>
+                    <p class="mt-2">Director - David is the creative visionary behind Theatre1, leading productions from inception to stage with passion and expertise.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded shadow text-center">
+                    <img src="assets/laura-foxcroft.jpg" alt="Laura Foxcroft" class="rounded-full h-32 w-32 mx-auto mb-4">
+                    <h3 class="text-2xl font-semibold">Laura Foxcroft</h3>
+                    <p class="mt-2">Musical Director - Laura brings the musical magic to Theatre1’s performances, ensuring every note and harmony is unforgettable.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded shadow text-center">
+                    <img src="assets/natalie-dale.jpg" alt="Natalie Dale" class="rounded-full h-32 w-32 mx-auto mb-4">
+                    <h3 class="text-2xl font-semibold">Natalie Dale</h3>
+                    <p class="mt-2">Technical Manager - Natalie crafts the visual and technical world of each show, creating immersive theatrical experiences.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded shadow text-center">
+                    <img src="assets/roger-foxcroft.jpg" alt="Roger Foxcroft" class="rounded-full h-32 w-32 mx-auto mb-4">
+                    <h3 class="text-2xl font-semibold">Roger Foxcroft</h3>
+                    <p class="mt-2">Secretary - Roger keeps the operations of Theatre1 running smoothly, supporting the team with his organizational expertise.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center p-6 bg-gray-800 mt-10 text-sm">
+        &copy; 2025 Theatre1. All rights reserved.
+    </footer>
+
+    <script>
+        // Simple page navigation
+        const links = document.querySelectorAll('nav a');
+        const sections = document.querySelectorAll('section');
+
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const href = link.getAttribute('href').replace('.html', '');
+
+                sections.forEach(section => section.classList.add('hidden'));
+                if (href === 'index') {
+                    sections[0].classList.remove('hidden');
+                } else if (href === 'past') {
+                    sections[1].classList.remove('hidden');
+                } else if (href === 'founders') {
+                    sections[2].classList.remove('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
