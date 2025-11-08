@@ -1,47 +1,43 @@
 # Theatre1 Website
 
-A simple, static website for Theatre1 to promote upcoming and past performances and introduce the founders. The current homepage highlights the production “High Fidelity – A New Musical,” with links to past performances and founders.
+A static, multi-page site highlighting Theatre1’s upcoming production and company history. The current season promotes **If/Then**, with archive and founders content on dedicated pages.
 
-## Features
-- Home hero with poster, dates, venue, and ticket link
-- Sections for past performances and founders with images and bios
-- Dark theme styling and responsive layout via Tailwind CSS CDN
-- Fully static: no server, database, or build step required
+## Current Structure
 
-## Tech Stack
-- HTML: Single page in `index.html` with three sections (Home, Past, Founders)
-- CSS: Tailwind CSS via CDN (`https://cdn.tailwindcss.com`), dark mode enabled with `class` strategy
-- JavaScript: Small inline script for client-side section switching (vanilla JS)
-- Assets: Images and icons in `assets/`
-- Hosting: Suitable for any static host; repo includes `CNAME` for a GitHub Pages custom domain (`theatre1.org.uk`)
+| File | Purpose |
+| --- | --- |
+| `index.html` | Homepage hero for *If/Then*, CTA, production copy, navigation |
+| `past.html` | Featured recap of *Songs for a New Decade* plus reverse-chronological archive cards |
+| `founders.html` | Grid of founder bios and headshots |
+| `assets/` | Posters, headshots, favicons (`site.webmanifest`, PWA icons, logo, etc.) |
+| `CNAME` | Points GitHub Pages to `theatre1.org.uk` |
+| `README.txt` | Legacy setup notes (kept for reference) |
 
-## Project Structure
-- `index.html` — Main site markup, Tailwind CDN, inline navigation script
-- `assets/` — Posters, headshots, logos, and PWA icons; includes `site.webmanifest`
-- `CNAME` — Custom domain for GitHub Pages (`theatre1.org.uk`)
-- `README.txt` — Original simple notes (superseded by this `README.md`)
+## Design & Styling Notes
 
-## How It Works
-- Navigation links (`Home`, `Past Performances`, `Founders`) are normal anchors, but a small script intercepts clicks and toggles which `<section>` is visible. There are no separate `past.html` or `founders.html` pages; all content lives in `index.html`.
-- Tailwind is configured via CDN with `darkMode: 'class'`, and the `<html>` tag includes `class="dark"` to enable the dark theme.
+- **Palette:** Burgundy/gold scheme derived from the If/Then artwork, configured via Tailwind CDN (`brand.*` colors in each HTML head). All pages share the same palette and typography via repeated config blocks.
+- **Layout:** Responsive Flexbox—homepage stacks on mobile and uses a split image/text layout on desktop (`flex-col lg:flex-row`). Past and founders pages use grid layouts with consistent card styling.
+- **Interactive Elements:**
+  - “Buy Tickets” button triggers an `alert('Tickets on sale soon')` placeholder instead of navigating.
+  - No other JavaScript beyond the Tailwind CDN (purely static pages).
 
-## Local Development
-1. Clone or download the repository.
-2. Open `index.html` directly in your browser (no server required).
+## Editing Guidelines
 
-Optional: If you prefer a local server for better caching/paths, run any static server (e.g., `python -m http.server 8080`) and open `http://localhost:8080`.
+1. **Update hero show details** in `index.html` (poster path, copy, CTA behavior). Keep desktop/mobile layout classes aligned.
+2. **Past performances** live in two blocks:
+   - Featured spotlight (currently *Songs for a New Decade*) near the top of `past.html`.
+   - Archive grid listed newest → oldest. Duplicate an existing card and adjust poster/metadata when adding a show; maintain ordering manually.
+3. **Founders** cards in `founders.html` mirror each other—duplicate a card block for new bios and add the portrait to `assets/`.
+4. **Palette changes** require updating the Tailwind config in each HTML head (it’s inlined three times). Consider centralizing in the future if the palette will change often.
 
-## Deployment
-- GitHub Pages: Push to the repo’s default branch. With `CNAME` present, Pages will serve at `https://theatre1.org.uk/` once DNS is configured.
-- Alternatives: Netlify, Vercel, Cloudflare Pages, or any static host; just deploy the root folder.
+## Development & Deployment
 
-## Editing Content
-- Update show details, dates, and links in `index.html` (hero section)
-- Add/remove past performances by duplicating the existing card pattern under the `Past Performances` section
-- Update founders’ bios and images in the `Founders` section; headshots live in `assets/`
+- Fully static; open the HTML files directly or run a lightweight static server (e.g., `python3 -m http.server 8080`).
+- Hosted via GitHub Pages (custom domain set by `CNAME`). Deploy by pushing to the default branch; no build step.
+- Tailwind is pulled from `https://cdn.tailwindcss.com`. If you need custom plugins or tree-shaking, migrate to a build process.
 
-## Notes & Considerations
-- Direct navigation to `past.html` or `founders.html` will 404 on static hosts because those files do not exist; the inline JS handles section toggling only after the homepage loads. Consider converting to real routes or hash-based URLs if deep links are needed.
-- The `site.webmanifest` references icon paths at the root (`/android-chrome-*.png`) while icons are stored under `assets/`. Update paths if enabling PWA installability.
-- Tailwind via CDN is convenient for a small static site. For larger sites or custom design systems, consider a build step with Tailwind CLI or a bundler to enable tree-shaking and custom config.
+## Future Considerations
 
+- Consolidate repeated Tailwind config into a shared layout or build step to avoid manual sync across pages.
+- Replace the alert-based CTA with a proper modal or ticketing link once on-sale info is available.
+- Introduce routing or a generator if additional pages (news, galleries, etc.) are planned, so shared navigation/footer logic isn’t duplicated.
