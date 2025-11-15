@@ -3,177 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Theatre1 - Coming Soon</title>
+    <title>Theatre1 | Celebrating 10 Years</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="192x192" href="assets/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="assets/android-chrome-512x512.png">
-    <link rel="manifest" href="assets/site.webmanifest">    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="manifest" href="assets/site.webmanifest">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#1a0c16',
+                            panel: '#2b1320',
+                            accent: '#f7c36a',
+                            accentDark: '#c04f53',
+                            text: '#fef1d8',
+                            muted: '#e0b495'
+                        }
+                    }
+                }
+            }
         }
     </script>
 </head>
-<body class="bg-gray-900 text-gray-100">
+<body class="bg-brand-dark text-brand-text">
     <!-- Navigation -->
-    <nav class="bg-gray-800 shadow p-4 flex justify-between">
-        <div class="flex items-center space-x-4">
-            <img src="assets/Theatre1 Logo Inverse.png" alt="Theatre1 Logo" class="h-10">
-            <span class="text-xl font-semibold">Theatre1</span>
+    <nav class="bg-brand-panel shadow p-4 flex justify-between border-b border-b-[#f7c36a33]">
+        <div class="flex items-center">
+            <img src="assets/Theatre1 Logo Inverse.png" alt="Theatre1 Logo" class="h-10 drop-shadow">
         </div>
         <div class="flex space-x-6 items-center">
-            <a href="index.html" class="hover:text-blue-400">Home</a>
-            <a href="past.html" class="hover:text-blue-400">Past Performances</a>
-            <a href="founders.html" class="hover:text-blue-400">Founders</a>
+            <a href="index.html" class="hover:text-brand-accent transition">Home</a>
+            <a href="past.html" class="hover:text-brand-accent transition">Past Performances</a>
+            <a href="founders.html" class="hover:text-brand-accent transition">Founders</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="text-center py-16">
-        <a href="https://www.crownwharftheatre.org.uk/songs-for-a-new-decade/" target="_blank" rel="noopener" class="inline-block focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-900">
-            <img src="assets/songs-for-a-new-decade.png" alt="Songs for a New Decade poster" class="mx-auto w-full max-w-xl rounded shadow-lg">
-        </a>
-        <div class="mt-6 flex justify-center">
-            <a href="https://www.crownwharftheatre.org.uk/songs-for-a-new-decade/" target="_blank" rel="noopener" class="px-6 py-3 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 transition">Buy Tickets</a>
-        </div>
-        <h1 class="text-5xl font-extrabold mt-8 tracking-tight">Songs for a New Decade</h1>
-        <h2 class="mt-4 text-2xl md:text-3xl font-semibold text-gray-200">Celebrating 10 years of fantastic theatre from Theatre1</h2>
-        <p class="mt-4 text-lg text-gray-300">Tickets £15 / £12 (Restricted View)</p>
-        <p class="mt-2 text-lg text-gray-300">15th December 2025 — Crown Wharf Theatre, Stone</p>
-        <p class="mt-4 text-lg text-gray-300">Join Theatre1 as they reflect on a decade of producing fantastic musical theatre in Staffordshire. After their two wonderful productions in Crown Wharf Theatre, and with plenty more in the pipeline, join this talented group of singers and actors as they bring the best songs from their back catalogue of shows.</p>
-        <p class="mt-4 text-lg text-gray-300">
-            <a href="https://facebook.com/t1stafford" target="_blank" rel="noopener" class="underline hover:text-blue-400">Follow us on Facebook to hear more about our forthcoming season</a>
-        </p>
-    </section>
-
-    <!-- Past Performances Page -->
-    <section id="past" class="py-10 hidden">
-        <div class="text-center">
-            <h2 class="text-3xl font-bold mb-6">Past Performances</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                <!-- Most recent: moved from hero -->
-                <div class="bg-gray-800 p-6 rounded shadow">
-                    <img src="assets/Early Poster - Square.png" alt="High Fidelity – A New Musical poster" class="rounded mb-4">
-                    <h3 class="text-2xl font-semibold">High Fidelity – A New Musical (2025)</h3>
-                    <p class="mt-2 text-gray-300">9th to 12th July 2025 — Crown Wharf Theatre, Stone, Staffordshire</p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded shadow">
-                    <img src="assets/4-days-to-go.png" alt="4 Days to Go" class="rounded mb-4">
-                    <h3 class="text-2xl font-semibold">4 Days to Go (2014)</h3>
-                    <p class="mt-2 text-gray-300">21 December 2014 — MET Studio, Gatehouse Theatre, Stafford</p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded shadow">
-                    <img src="assets/songs-for-a-new-world.jpg" alt="Songs For a New World" class="rounded mb-4">
-                    <h3 class="text-2xl font-semibold">Songs For a New World (2015)</h3>
-                    <p class="mt-2 text-gray-300">14–17 July 2015 — MET Studio, Gatehouse Theatre, Stafford</p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded shadow">
-                    <img src="assets/mistletoe-and-musicals.png" alt="Mistleto and Musicals" class="rounded mb-4">
-                    <h3 class="text-2xl font-semibold">Mistletoe &amp; Musicals (2015)</h3>
-                    <p class="mt-2 text-gray-300">20 December 2015 — MET Studio, Gatehouse Theatre, Stafford</p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded shadow">
-                    <img src="assets/dogfight.png" alt="Dogfight" class="rounded mb-4">
-                    <h3 class="text-2xl font-semibold">Dogfight (2016)</h3>
-                    <p class="mt-2 text-gray-300">12–16 July 2016 — MET Studio, Gatehouse Theatre, Stafford</p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded shadow">
-                    <img src="assets/because-its-christmas.jpg" alt="Because it's Christmas" class="rounded mb-4">
-                    <h3 class="text-2xl font-semibold">Because it's Christmas (2016)</h3>
-                    <p class="mt-2 text-gray-300">18 December 2016 — MET Studio, Gatehouse Theatre, Stafford</p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded shadow">
-                    <img src="assets/i-love-you-because.png" alt="I Love You Because" class="rounded mb-4">
-                    <h3 class="text-2xl font-semibold">I Love You Because (2017)</h3>
-                    <p class="mt-2 text-gray-300">11–15 July 2017 — MET Studio, Gatehouse Theatre, Stafford</p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded shadow">
-                    <img src="assets/relatively-christmas.png" alt="Relatively Christmas" class="rounded mb-4">
-                    <h3 class="text-2xl font-semibold">Relatively Christmas (2017)</h3>
-                    <p class="mt-2 text-gray-300">18 December 2017 — MET Studio, Gatehouse Theatre, Stafford</p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded shadow">
-                    <img src="assets/theory-of-relativity.png" alt="Theory of Relativity" class="rounded mb-4">
-                    <h3 class="text-2xl font-semibold">Theory of Relativity (2018)</h3>
-                    <p class="mt-2 text-gray-300">16–18 July 2018 — MET Studio, Gatehouse Theatre, Stafford</p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded shadow">
-                    <img src="assets/an-evening-of-pasek-and-paul.png" alt="An Evening of Pasek and Paul" class="rounded mb-4">
-                    <h3 class="text-2xl font-semibold">An Evening of Pasek and Paul (2018)</h3>
-                    <p class="mt-2 text-gray-300">14 December 2018 — MET Studio, Gatehouse Theatre, Stafford</p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded shadow">
-                    <img src="assets/an-evening-of-jason-robert-brown.jpg" alt="An Evening of Jason Robert Brown" class="rounded mb-4">
-                    <h3 class="text-2xl font-semibold">An Evening of Jason Robert Brown (2019)</h3>
-                    <p class="mt-2 text-gray-300">2 March 2019 — MET Studio, Gatehouse Theatre, Stafford</p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded shadow">
-                    <img src="assets/edges-ordinary-days.png" alt="Edges / Ordinary Days - a double bill" class="rounded mb-4">
-                    <h3 class="text-2xl font-semibold">Edges / Ordinary Days - a double bill (2019)</h3>
-                    <p class="mt-2 text-gray-300">16–20 July 2019 — MET Studio, Gatehouse Theatre, Stafford</p>
-                </div>
-                <!-- Add similar blocks for each past performance with corresponding images -->
+    <section class="py-16 px-4">
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-10">
+            <div class="lg:w-1/2 w-full flex flex-col items-center">
+                <a href="https://www.crownwharftheatre.org.uk/songs-for-a-new-decade/" target="_blank" rel="noopener" class="block text-center focus:outline-none focus:ring-2 focus:ring-brand-accent focus:ring-offset-2 focus:ring-offset-brand-dark rounded-lg">
+                    <img src="assets/if-then.png" alt="If/Then poster art" class="w-full max-w-xl mx-auto rounded-lg shadow-2xl border border-[#f7c36a66]">
+                </a>
+                <a href="https://mpv.tickets.com/schedule/?agency=CWTV_PL_MPV&amp;orgid=56989#/?event=then&amp;view=list&amp;includePackages=true" class="mt-6 px-6 py-3 bg-brand-accent text-brand-dark font-semibold rounded hover:bg-brand-accentDark transition focus:outline-none focus:ring-2 focus:ring-brand-accent focus:ring-offset-2 focus:ring-offset-brand-dark">Buy Tickets</a>
             </div>
-        </div>
-    </section>
-
-    <!-- Founders Page -->
-    <section id="founders" class="py-10 hidden">
-        <div class="text-center">
-            <h2 class="text-3xl font-bold mb-6">Meet the Founders</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="bg-gray-800 p-6 rounded shadow text-center">
-                    <img src="assets/david-reynolds.jpg" alt="David Reynolds" class="rounded-full h-32 w-32 mx-auto mb-4">
-                    <h3 class="text-2xl font-semibold">David Reynolds</h3>
-                    <p class="mt-2">Director - David is the creative vision behind Theatre1, leading productions from inception to stage with passion, expertise and haze. Lots of haze!</p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded shadow text-center">
-                    <img src="assets/laura-foxcroft.jpg" alt="Laura Foxcroft" class="rounded-full h-32 w-32 mx-auto mb-4">
-                    <h3 class="text-2xl font-semibold">Laura Foxcroft</h3>
-                    <p class="mt-2">Musical Director - A graduate of Birmingham Conservatoire Laura brings the musical magic to Theatre1’s performances. Theatre1 is well known for it's strong harmonies and powerful singing.</p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded shadow text-center">
-                    <img src="assets/natalie-dale.jpg" alt="Natalie Dale" class="rounded-full h-32 w-32 mx-auto mb-4">
-                    <h3 class="text-2xl font-semibold">Natalie Dale</h3>
-                    <p class="mt-2">Technical Manager - Natalie crafts the visual and technical world of each show, creating immersive theatrical experiences.</p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded shadow text-center">
-                    <img src="assets/roger-foxcroft.jpg" alt="Roger Foxcroft" class="rounded-full h-32 w-32 mx-auto mb-4">
-                    <h3 class="text-2xl font-semibold">Roger Foxcroft</h3>
-                    <p class="mt-2">Secretary - Roger produces Theatre1 shows, ensuring the creative team have all the support they need.</p>
-                </div>
+            <div class="lg:w-1/2 text-center lg:text-left">
+                <h1 class="text-5xl font-extrabold mt-8 tracking-tight">If/Then</h1>
+                <h2 class="mt-4 text-2xl md:text-3xl font-semibold text-brand-muted">A bold Broadway musical about choice, destiny, and possibility.</h2>
+                <p class="mt-6 text-lg leading-relaxed text-brand-text">
+                    Theatre1 proudly presents If/Then — the bold, contemporary Broadway musical rarely seen on local stages. From the Tony Award-winning creators of Next to Normal, If/Then follows Elizabeth as one choice splits her life into two parallel journeys—each filled with love, loss, and possibility. With a stunning, modern score and heartfelt storytelling, this moving production explores how the smallest decisions can shape our destiny.
+                </p>
+                <p class="mt-4 text-lg leading-relaxed text-brand-text">
+                    Known for staging exceptional musicals seldom performed in this region, Theatre1 brings If/Then to life with its signature professionalism, emotional depth, and outstanding local talent. Don’t miss this unforgettable theatrical experience.
+                </p>
+                <p class="mt-6 text-lg">
+                    <a href="https://facebook.com/t1stafford" target="_blank" rel="noopener" class="underline text-brand-accent hover:text-brand-accentDark transition">Follow us on Facebook for updates</a>
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="text-center p-6 bg-gray-800 mt-10 text-sm">
+    <footer class="text-center p-6 bg-brand-panel mt-10 text-sm border-t border-t-[#f7c36a33]">
         &copy; 2025 Theatre1. All rights reserved.
     </footer>
-
-    <script>
-        // Simple page navigation
-        const links = document.querySelectorAll('nav a');
-        const sections = document.querySelectorAll('section');
-
-        links.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const href = link.getAttribute('href').replace('.html', '');
-
-                sections.forEach(section => section.classList.add('hidden'));
-                if (href === 'index') {
-                    sections[0].classList.remove('hidden');
-                } else if (href === 'past') {
-                    sections[1].classList.remove('hidden');
-                } else if (href === 'founders') {
-                    sections[2].classList.remove('hidden');
-                }
-            });
-        });
-    </script>
 </body>
 </html>

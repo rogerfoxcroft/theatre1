@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Founders | Theatre1 | Celebrating 10 Years</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/android-chrome-512x512.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#1a0c16',
+                            panel: '#2b1320',
+                            accent: '#f7c36a',
+                            accentDark: '#c04f53',
+                            text: '#fef1d8',
+                            muted: '#e0b495'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark text-brand-text">
+    <!-- Navigation -->
+    <nav class="bg-brand-panel shadow p-4 flex justify-between border-b border-b-[#f7c36a33]">
+        <div class="flex items-center">
+            <img src="assets/Theatre1 Logo Inverse.png" alt="Theatre1 Logo" class="h-10 drop-shadow">
+        </div>
+        <div class="flex space-x-6 items-center">
+            <a href="index.html" class="hover:text-brand-accent transition">Home</a>
+            <a href="past.html" class="hover:text-brand-accent transition">Past Performances</a>
+            <a href="founders.html" class="hover:text-brand-accent transition">Founders</a>
+        </div>
+    </nav>
+
+    <!-- Founders -->
+    <section class="py-16 px-4">
+        <div class="text-center mb-10 max-w-3xl mx-auto">
+            <h1 class="text-4xl font-extrabold tracking-tight">Meet the Founders</h1>
+            <p class="mt-4 text-lg text-brand-muted">The creative team who has shaped Theatre1’s voice across a decade of Off-Broadway and Off-West End inspired productions.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div class="bg-brand-panel p-6 rounded shadow text-center border border-[#f7c36a33]">
+                <img src="assets/david-reynolds.jpg" alt="David Reynolds" class="rounded-full h-32 w-32 mx-auto mb-4">
+                <h3 class="text-2xl font-semibold">David Reynolds</h3>
+                <p class="mt-2 text-brand-muted">Director - David is the creative vision behind Theatre1, leading productions from inception to stage with passion, expertise and haze. Lots of haze!</p>
+            </div>
+            <div class="bg-brand-panel p-6 rounded shadow text-center border border-[#f7c36a33]">
+                <img src="assets/laura-foxcroft.jpg" alt="Laura Foxcroft" class="rounded-full h-32 w-32 mx-auto mb-4">
+                <h3 class="text-2xl font-semibold">Laura Foxcroft</h3>
+                <p class="mt-2 text-brand-muted">Musical Director - A graduate of Birmingham Conservatoire Laura brings the musical magic to Theatre1’s performances. Theatre1 is well known for it's strong harmonies and powerful singing.</p>
+            </div>
+            <div class="bg-brand-panel p-6 rounded shadow text-center border border-[#f7c36a33]">
+                <img src="assets/natalie-dale.jpg" alt="Natalie Dale" class="rounded-full h-32 w-32 mx-auto mb-4">
+                <h3 class="text-2xl font-semibold">Natalie Dale</h3>
+                <p class="mt-2 text-brand-muted">Technical Manager - Natalie crafts the visual and technical world of each show, creating immersive theatrical experiences.</p>
+            </div>
+            <div class="bg-brand-panel p-6 rounded shadow text-center border border-[#f7c36a33]">
+                <img src="assets/roger-foxcroft.jpg" alt="Roger Foxcroft" class="rounded-full h-32 w-32 mx-auto mb-4">
+                <h3 class="text-2xl font-semibold">Roger Foxcroft</h3>
+                <p class="mt-2 text-brand-muted">Secretary - Roger produces Theatre1 shows, ensuring the creative team have all the support they need.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center p-6 bg-brand-panel mt-10 text-sm border-t border-t-[#f7c36a33]">
+        &copy; 2025 Theatre1. All rights reserved.
+    </footer>
+</body>
+</html>
