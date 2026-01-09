@@ -8,7 +8,7 @@ A static, multi-page site highlighting Theatre1’s upcoming production and comp
 | --- | --- |
 | `index.html` | Homepage hero for *If/Then*, CTA, production copy, navigation |
 | `past.html` | Featured recap of *Songs for a New Decade* plus reverse-chronological archive cards |
-| `founders.html` | Grid of founder bios and headshots |
+| `about.html` | Mission statement and grid of founder bios and headshots |
 | `assets/` | Posters, headshots, favicons (`site.webmanifest`, PWA icons, logo, etc.) |
 | `CNAME` | Points GitHub Pages to `theatre1.org.uk` |
 | `README.txt` | Legacy setup notes (kept for reference) |
@@ -27,7 +27,7 @@ A static, multi-page site highlighting Theatre1’s upcoming production and comp
 2. **Past performances** live in two blocks:
    - Featured spotlight (currently *Songs for a New Decade*) near the top of `past.html`.
    - Archive grid listed newest → oldest. Duplicate an existing card and adjust poster/metadata when adding a show; maintain ordering manually.
-3. **Founders** cards in `founders.html` mirror each other—duplicate a card block for new bios and add the portrait to `assets/`.
+3. **Founders** cards in `about.html` mirror each other—duplicate a card block for new bios and add the portrait to `assets/`.
 4. **Palette changes** require updating the Tailwind config in each HTML head (it’s inlined three times). Consider centralizing in the future if the palette will change often.
 
 ## Development & Deployment
